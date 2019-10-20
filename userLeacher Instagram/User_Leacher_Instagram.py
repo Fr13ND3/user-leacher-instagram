@@ -437,7 +437,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                     ***** Result *****</p></body></html>"))
         self.groupBox.setTitle(_translate("MainWindow", "Type Leach"))
-        self.label.setText(_translate("MainWindow", "Please choese type : "))
+        self.label.setText(_translate("MainWindow", "Please Choose type : "))
         self.comboBox.setCurrentText(_translate("MainWindow", "Comment"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Comment"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Follower"))
