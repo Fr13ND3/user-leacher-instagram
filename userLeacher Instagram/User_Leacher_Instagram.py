@@ -1,7 +1,6 @@
 # -Coded By : Zed-Team
-# -Channel Telegram : @Arch_TM
-# -Instagram : @insta_cra3ked
-# -id programer in telegram : @Cra3ked
+# -Channel Telegram : @FR13ND3
+# -Id programer in telegram : @Cra3ked
 import os
 try:
     from selenium import webdriver
@@ -152,7 +151,7 @@ class Ui_MainWindow(object):
                     app.processEvents()
                     for i in range(1,20):
                         try:
-                            more = driver.find_element_by_xpath('/html/body/span/section/main/div/div/article/div[2]/div[1]/ul/li/div/button')
+                            more = driver.find_element_by_xpath('//html/body/div[1]/section/main/div/div/article/div[2]/div[1]/ul/li/div/button/span')
                             more.click()
                             sleep(2)
                             app.processEvents()
@@ -165,7 +164,7 @@ class Ui_MainWindow(object):
                     for e in range(0,10):
                         try:
                             for elem in all_user:
-                                if "FPmhX notranslate TlrDj" in elem.get_attribute('class') :
+                                if "FPmhX notranslate  TlrDj" in elem.get_attribute('class') :
                                     if elem.get_attribute('href') not in alll:
                                         app.processEvents()
                                         al.append(elem.get_attribute('href'))
@@ -215,17 +214,18 @@ class Ui_MainWindow(object):
             try:
                 driver.get('https://www.instagram.com/accounts/login/')
                 self.L_RESULT.setText('login in your account')
-                sleep(3)
+                sleep(4)
                 app.processEvents()
-                input_username = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
+                input_username = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
                 sleep(1)
                 app.processEvents()
-                input_password = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input").send_keys(u_password)
+                input_password = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input").send_keys(u_password)
                 sleep(1)
                 app.processEvents()
-                btn_login = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[4]/button")
+                btn_login = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[4]")
+                sleep(1)
                 btn_login.click()
-                sleep(3)
+                sleep(4)
                 
                 try:
                     driver.find_element_by_xpath('//*[@id="slfErrorAlert"]')
@@ -269,7 +269,7 @@ class Ui_MainWindow(object):
             while True:
                 app.exec_()
                 al.clear()
-                eula = driver.find_element_by_xpath('/html/body/div[3]/div/div[2]')
+                eula = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]')
                 app.processEvents()
                 sleep(1)
                 driver.execute_script('arguments[0].scrollTo(0,600)', eula)
@@ -281,13 +281,14 @@ class Ui_MainWindow(object):
                     all_user = driver.find_elements_by_tag_name('a')
                     app.processEvents()
                     for elem in all_user:
-                        if "FPmhX notranslate _0imsa " in elem.get_attribute('class') :
+                        if "FPmhX notranslate  _0imsa " in elem.get_attribute('class') :
                             if elem.get_attribute('href') not in alll:
                                 app.processEvents()
                                 al.append(elem.get_attribute('href'))
                             else:
                                 continue
                     app.processEvents()
+                    # print(al)
                     for ii in al:
                         s = "".join(ii)
                         s = s.split('https://www.instagram.com/')
@@ -305,7 +306,7 @@ class Ui_MainWindow(object):
                                 af.write(s)
                                 app.processEvents()
                                 af.write('\n')
-                            sleep(0.1)
+                            sleep(0.01)
                         self.L_RESULT.setText(f'Leached : {counnt}')
 
                         
@@ -335,17 +336,18 @@ class Ui_MainWindow(object):
             try:
                 driver.get('https://www.instagram.com/accounts/login/')
                 self.L_RESULT.setText('login in your account')
-                sleep(3)
+                sleep(4)
                 app.processEvents()
-                input_username = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
+                input_username = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
                 sleep(1)
                 app.processEvents()
-                input_password = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input").send_keys(u_password)
+                input_password = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input").send_keys(u_password)
                 sleep(1)
                 app.processEvents()
-                btn_login = driver.find_element_by_xpath("/html/body/span/section/main/div/article/div/div[1]/div/form/div[4]/button")
+                btn_login = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[4]")
+                sleep(1)
                 btn_login.click()
-                sleep(3)
+                sleep(4)
                 app.processEvents()
             except Exception as ee:
                 self.TX_RESULT.append(ee)
@@ -382,7 +384,7 @@ class Ui_MainWindow(object):
             while True:
                 app.exec_()
                 al.clear()
-                eula = driver.find_element_by_xpath('/html/body/div[3]/div/div[2]')
+                eula = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]')
                 app.processEvents()
                 sleep(1)
                 driver.execute_script('arguments[0].scrollTo(0,600)', eula)
@@ -394,7 +396,7 @@ class Ui_MainWindow(object):
                     all_user = driver.find_elements_by_tag_name('a')
                     app.processEvents()
                     for elem in all_user:
-                        if "FPmhX notranslate _0imsa " in elem.get_attribute('class') :
+                        if "FPmhX notranslate  _0imsa " in elem.get_attribute('class') :
                             if elem.get_attribute('href') not in alll:
                                 app.processEvents()
                                 al.append(elem.get_attribute('href'))
@@ -417,7 +419,7 @@ class Ui_MainWindow(object):
                                 af.write(s)
                                 app.processEvents()
                                 af.write('\n')
-                            sleep(0.1)
+                            sleep(0.01)
                         self.L_RESULT.setText(f'Leached : {counnt}')
                 except Exception as ee:
                     continue
@@ -430,14 +432,14 @@ class Ui_MainWindow(object):
         pass
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Instgram User Leacher Coded By Zed-Team | Telegram : @Arch_TM"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Instgram User Leacher Coded By Zed-Team | Telegram : @FR13ND3"))
         self.TX_RESULT.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                     ***** Result *****</p></body></html>"))
         self.groupBox.setTitle(_translate("MainWindow", "Type Leach"))
-        self.label.setText(_translate("MainWindow", "Please Choose type : "))
+        self.label.setText(_translate("MainWindow", "Please choese type : "))
         self.comboBox.setCurrentText(_translate("MainWindow", "Comment"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Comment"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Follower"))
