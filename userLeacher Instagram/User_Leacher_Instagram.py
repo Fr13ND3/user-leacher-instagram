@@ -1,6 +1,7 @@
 # -Coded By : Zed-Team
-# -Channel Telegram : @FR13ND3
-# -Id programer in telegram : @Cra3ked
+# -Channel Telegram : @Arch_TM
+# -Instagram : @insta_cra3ked
+# -id programer in telegram : @Cra3ked
 import os
 try:
     from selenium import webdriver
@@ -127,9 +128,9 @@ class Ui_MainWindow(object):
 
                 app.processEvents()
                 driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
-                sleep(0.5)
+                sleep(0.6)
                 driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
-                sleep(0.5)
+                sleep(0.6)
                 driver.execute_script('window.scrollTo(0,0)')
                 link_address_p = []
                 self.L_RESULT.setText('Now get link posts')
@@ -214,7 +215,7 @@ class Ui_MainWindow(object):
             try:
                 driver.get('https://www.instagram.com/accounts/login/')
                 self.L_RESULT.setText('login in your account')
-                sleep(4)
+                sleep(5)
                 app.processEvents()
                 input_username = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
                 sleep(1)
@@ -225,7 +226,7 @@ class Ui_MainWindow(object):
                 btn_login = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[4]")
                 sleep(1)
                 btn_login.click()
-                sleep(4)
+                sleep(5)
                 
                 try:
                     driver.find_element_by_xpath('//*[@id="slfErrorAlert"]')
@@ -336,7 +337,7 @@ class Ui_MainWindow(object):
             try:
                 driver.get('https://www.instagram.com/accounts/login/')
                 self.L_RESULT.setText('login in your account')
-                sleep(4)
+                sleep(5)
                 app.processEvents()
                 input_username = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input").send_keys(u_username)
                 sleep(1)
@@ -347,7 +348,7 @@ class Ui_MainWindow(object):
                 btn_login = driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/div/div[1]/div/form/div[4]")
                 sleep(1)
                 btn_login.click()
-                sleep(4)
+                sleep(5)
                 app.processEvents()
             except Exception as ee:
                 self.TX_RESULT.append(ee)
@@ -389,7 +390,7 @@ class Ui_MainWindow(object):
                 sleep(1)
                 driver.execute_script('arguments[0].scrollTo(0,600)', eula)
                 app.processEvents()
-                sleep(2)
+                sleep(1)
                 driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight', eula)
                 app.processEvents()
                 try:
@@ -432,7 +433,7 @@ class Ui_MainWindow(object):
         pass
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Instgram User Leacher Coded By Zed-Team | Telegram : @FR13ND3"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Insta User Leacher Coded By Zed-Team | Telegram : @FR13ND3"))
         self.TX_RESULT.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
